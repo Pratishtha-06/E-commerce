@@ -16,7 +16,9 @@ function Home() {
 
   // Fetch items
   useEffect(() => {
-    axios.get("https://e-commerce-1-6nfx.onrender.com/items")
+
+     const API_URL = process.env.REACT_APP_API_URL;
+    axios.get(`${API_URL}/items`)
       .then((res) => {
         setItems(res.data);
         setFilteredItems(res.data);

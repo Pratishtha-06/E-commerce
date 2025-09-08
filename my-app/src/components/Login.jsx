@@ -36,7 +36,9 @@ function Login(){
        setError("All fields are required");
        return;
       }
-      const response = await axios.post('https://e-commerce-1-6nfx.onrender.com/login', { 
+
+      const API_URL = process.env.REACT_APP_API_URL;
+      const response = await axios.post(`${API_URL}/login`, { 
          email,password
        }, {withCredentials:true});
       const {message} = response.data;

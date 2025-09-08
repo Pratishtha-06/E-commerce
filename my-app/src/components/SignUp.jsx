@@ -38,8 +38,10 @@ function SignUp(){
               setError("All fields are required");
               return;
          }
-
-       const response = await axios.post('https://e-commerce-1-6nfx.onrender.com/signup',{
+       
+       const API_URL = process.env.REACT_APP_API_URL;
+         
+       const response = await axios.post(`${API_URL}/signup`,{
               name,email,password
        })
               const {message,status} = response.data;

@@ -13,8 +13,10 @@ const navigate = useNavigate();
  const handleRemoveFromCart = (item) => {
     removeFromCart(item.id);
 
+    const API_URL = process.env.REACT_APP_API_URL;
+
     axios
-      .delete("https://e-commerce-1-6nfx.onrender.com/cart", { data: { userEmail: user.email, itemId: item.id } })
+      .delete(`${API_URL}/cart`, { data: { userEmail: user.email, itemId: item.id } })
       .then((res) => console.log(res.data))
       .catch((err) => console.error(err));
 
