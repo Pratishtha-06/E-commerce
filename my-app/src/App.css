@@ -1,0 +1,76 @@
+#root{
+    display: flex;
+    justify-content: center;
+    background-color: #edf1f5;
+}
+.login{
+    background-color: #4372c7;
+    padding: 30px 0px 0px 35px;
+}
+.SignUp{
+    font-style: italic;
+    font-weight: bold;
+    color: #4372c7;
+}
+.Login-box{
+    border-style: solid;
+    border-color: rgb(215, 212, 212) ;
+    border-radius: 0px 0px 10px 10px;
+    border-top: transparent;
+    padding: 10px 25px;
+}
+.SignUp-box{
+    border-style: solid;
+    border-color: rgb(215, 212, 212) ;
+    border-radius: 0px 0px 10px 10px;
+    border-top: transparent;
+    padding: 10px 25px;
+}
+.header{
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3); ;
+}
+.Link{
+    color: black;
+    text-decoration: none;
+}
+.Link:hover{
+    border-bottom: 2px solid #4372c7;
+}
+.Submit{
+    background-color:#4372c7 ;
+    width: 120px;
+    height: 36px;
+    text-align: center;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+.Submit:hover{
+    background-color: white;
+    color: black;
+}
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.AddCart{
+    border: #4372c7 solid 1px;
+    color: #4372c7;
+    background-color: white;
+}
+.AddCart:hover{
+    background-color: #4372c7;
+    color: white;
+}
+.cartEmpty{
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+}
