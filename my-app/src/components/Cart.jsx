@@ -16,7 +16,7 @@ const navigate = useNavigate();
     const API_URL = import.meta.env.VITE_API_URL;
 
     axios
-      .delete(`${API_URL}/cart`, { data: { userEmail: user.email, itemId: item.id } })
+      .delete(`${API_URL}/cart`, { data: { userEmail: user.email, itemId: item.id } ,withCredentials:true})
       .then((res) => console.log(res.data))
       .catch((err) => console.error(err));
 

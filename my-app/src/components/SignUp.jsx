@@ -43,7 +43,7 @@ function SignUp(){
          
        const response = await axios.post(`${API_URL}/signup`,{
               name,email,password
-       })
+       },{withCredentials:true})
               const {message,status} = response.data;
               
               if(status === 200){

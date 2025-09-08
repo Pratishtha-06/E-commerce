@@ -14,7 +14,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cors({
     origin : ['http://localhost:5173','https://e-commerce-2-pjs6.onrender.com'],
-    credentials:true
+    credentials : true
 }));
 app.use('/public', express.static('public'));
 require('dotenv').config({path:'./.env'});
@@ -73,8 +73,8 @@ app.post('/login' , async(req,res)=>{
             }
             return res.cookie('token',token,{
                 httpOnly:true,
-                secure:true,
-                sameSite:'none'
+                secure:isProduction,
+                sameSite:isProduction?'none':'lax'
             })
             .status(200)
             .json({message:"success"});
@@ -93,7 +93,11 @@ app.post('/login' , async(req,res)=>{
 
 //Items ---
 app.get('/items',async(req,res)=>{
+    try{
     res.json(items);
+    }catch(err){
+        res.status(500).json({message:"Error occured"});
+    }
 })
 
 //PORT 

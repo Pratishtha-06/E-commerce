@@ -18,7 +18,7 @@ function Home() {
   useEffect(() => {
 
      const API_URL =import.meta.env.VITE_API_URL;
-    axios.get(`${API_URL}/items`)
+    axios.get(`${API_URL}/items`,{withCredentials:true})
       .then((res) => {
         setItems(res.data);
         setFilteredItems(res.data);
