@@ -36,7 +36,7 @@ function Login(){
        setError("All fields are required");
        return;
       }
-      const response = await axios.post('http://localhost:3000/login', { 
+      const response = await axios.post('https://e-commerce-1-6nfx.onrender.com/login', { 
          email,password
        }, {withCredentials:true});
       const {message} = response.data;

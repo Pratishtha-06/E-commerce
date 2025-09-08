@@ -16,7 +16,7 @@ function Home() {
 
   // Fetch items
   useEffect(() => {
-    axios.get("http://localhost:3000/items")
+    axios.get("https://e-commerce-1-6nfx.onrender.com/items")
       .then((res) => {
         setItems(res.data);
         setFilteredItems(res.data);
@@ -54,7 +54,7 @@ function Home() {
   addToCart(item);
 
   // Send user and item to backend cart API
-  axios.post(`http://localhost:3000/cart`, { userEmail: user, item })
+  axios.post(`https://e-commerce-1-6nfx.onrender.com/cart`, { userEmail: user, item })
     .then((res) => console.log(res.data))
     .catch((err) => console.error(err));
 

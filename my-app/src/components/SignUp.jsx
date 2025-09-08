@@ -39,7 +39,7 @@ function SignUp(){
               return;
          }
 
-       const response = await axios.post('http://localhost:3000/signup',{
+       const response = await axios.post('https://e-commerce-1-6nfx.onrender.com/signup',{
               name,email,password
        })
               const {message,status} = response.data;

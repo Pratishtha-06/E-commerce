@@ -14,7 +14,7 @@ const navigate = useNavigate();
     removeFromCart(item.id);
 
     axios
-      .delete("http://localhost:3000/cart", { data: { userEmail: user.email, itemId: item.id } })
+      .delete("https://e-commerce-1-6nfx.onrender.com/cart", { data: { userEmail: user.email, itemId: item.id } })
       .then((res) => console.log(res.data))
       .catch((err) => console.error(err));
 
