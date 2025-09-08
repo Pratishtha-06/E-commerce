@@ -13,7 +13,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cors({
-    origin : 'http://localhost:5173',
+    origin : ['http://localhost:5173','https://e-commerce-2-pjs6.onrender.com'],
     credentials:true
 }));
 app.use('/public', express.static('public'));
